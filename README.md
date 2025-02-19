@@ -15,7 +15,7 @@ A **futuristic and interactive** Tic-Tac-Toe game with **player vs player** and 
 - **JavaScript** – Game logic & AI (Minimax Algorithm)  
 
 ## 📷 Screenshots
-![Tic-Tac-Toe Preview](https://github.com/rahulpatel51/Tic-Tac-Toe-Game/blob/main/Img.png) *(Replace with actual screenshot)*
+![Tic-Tac-Toe Preview](https://github.com/rahulpatel51/Tic-Tac-Toe-Game/blob/main/Game_Page.png) *(Replace with actual screenshot)*
 
 ## 🚀 How to Run Locally
 1. Clone the repository:
