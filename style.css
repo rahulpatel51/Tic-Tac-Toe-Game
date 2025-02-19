@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 10px cyan;
+}
+.mode-selector {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 220px;
+}
+.mode-selector label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 10px;
+    color: cyan;
+}
+select {
+    padding: 8px;
+    font-size: 1rem;
+    background: #00ffff;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(80px, 120px));
+    grid-template-rows: repeat(3, minmax(80px, 120px));
+    gap: 5px;
+    margin: 10px auto;
+    max-width: 360px;
+}
+.cell {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.cell:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.win {
+    animation: glow 1s infinite alternate;
+}
+@keyframes glow {
+    0% { color: lime; text-shadow: 0px 0px 10px lime; }
+    100% { color: cyan; text-shadow: 0px 0px 20px cyan; }
+}
+.reset {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: cyan;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.reset:hover {
+    background: lime;
+}
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, minmax(60px, 90px));
+        grid-template-rows: repeat(3, minmax(60px, 90px));
+    }
+    .cell {
+        font-size: 2.5rem;
+    }
+}
